@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cpeox80muissq"]
+[gd_scene load_steps=15 format=3 uid="uid://cpeox80muissq"]
 
 [ext_resource type="Texture2D" uid="uid://r6yaq0im2m18" path="res://templates/japanese-school_8x8-final.tileset.png" id="1_dd6p5"]
 [ext_resource type="Texture2D" uid="uid://ct0etsa2brqfx" path="res://templates/japanefloor_1.png" id="2_sv802"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cq7fq8k4eq1dy" path="res://templates/floor-right.png" id="4_030so"]
 [ext_resource type="Texture2D" uid="uid://by3urmrt0aj4t" path="res://templates/floor-top.png" id="5_0xelf"]
 [ext_resource type="Texture2D" uid="uid://dy2d5ffud6rnr" path="res://templates/Pixel Art/9.png" id="6_txygj"]
+[ext_resource type="PackedScene" uid="uid://ddydb2wjt12l8" path="res://player.tscn" id="7_5qyxo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wl6d4"]
 texture = ExtResource("1_dd6p5")
@@ -845,3 +846,6 @@ texture = ExtResource("6_txygj")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(685, 346)
 zoom = Vector2(5, 5)
+
+[node name="player" parent="." instance=ExtResource("7_5qyxo")]
+position = Vector2(683, 298)
