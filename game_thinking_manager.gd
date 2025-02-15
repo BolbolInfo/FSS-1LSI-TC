@@ -13,4 +13,5 @@ func _ready() -> void:
 	player.stop_moving()
 	await get_tree().create_timer(1.5).timeout
 	player.talk()
-	
+	await get_tree().create_timer(5).timeout
+	SceneTrans.change_scene("res://city.tscn")
