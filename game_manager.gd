@@ -10,7 +10,9 @@ func _ready() -> void:
 	await get_tree().create_timer(5).timeout
 	player.move_from_stage()
 	move_stage_animator.play("move_stage")
-	
+	await move_stage_animator.animation_finished
+	await get_tree().create_timer(2).timeout
+	SceneTrans.change_scene("res://thinking.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
