@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cpeox80muissq"]
+[gd_scene load_steps=37 format=3 uid="uid://cpeox80muissq"]
 
 [ext_resource type="Texture2D" uid="uid://hah6rndhw2op" path="res://templates/wall_right.png" id="1_00vy3"]
 [ext_resource type="Texture2D" uid="uid://r6yaq0im2m18" path="res://templates/japanese-school_8x8-final.tileset.png" id="1_dd6p5"]
@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://b27cwa3lrdi6" path="res://templates/head7.png" id="13_ge5u0"]
 [ext_resource type="Texture2D" uid="uid://dlc2dxomqj57t" path="res://templates/fss.png" id="16_ja6u4"]
 [ext_resource type="Script" path="res://game_manager.gd" id="18_32tls"]
-[ext_resource type="Script" path="res://player.gd" id="18_ocl33"]
 [ext_resource type="Texture2D" uid="uid://25rppj6auubt" path="res://templates/for9e3a_1.png" id="19_68xm7"]
 [ext_resource type="Texture2D" uid="uid://bwgp6yqtqcmj1" path="res://templates/for9e3a_4.png" id="20_qumsf"]
 
@@ -1278,7 +1277,6 @@ autoplay = "zoom_out"
 [node name="player" parent="." instance=ExtResource("7_5qyxo")]
 unique_name_in_owner = true
 position = Vector2(683, 298)
-script = ExtResource("18_ocl33")
 
 [node name="game_manager" type="Node" parent="."]
 unique_name_in_owner = true

@@ -1,6 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://ddydb2wjt12l8"]
+[gd_scene load_steps=27 format=3 uid="uid://ddydb2wjt12l8"]
 
 [ext_resource type="Texture2D" uid="uid://dlkhf7schohck" path="res://templates/Clothes 3/Character1M_3_idle_0.png" id="1_3xa24"]
+[ext_resource type="Script" path="res://player.gd" id="1_fluae"]
 [ext_resource type="Texture2D" uid="uid://bltd0qofyaxy" path="res://templates/Clothes 3/Character1M_3_idle_1.png" id="2_83ue2"]
 [ext_resource type="Texture2D" uid="uid://b0qa32277loyy" path="res://templates/Clothes 3/Character1M_3_idle_2.png" id="3_bmto7"]
 [ext_resource type="Texture2D" uid="uid://bfnref5gjpnp" path="res://templates/Clothes 3/Character1M_3_idle_3.png" id="4_0b684"]
@@ -116,10 +117,11 @@ size = Vector2(23, 32.5)
 
 [node name="player" type="CharacterBody2D"]
 scale = Vector2(0.447004, 0.447004)
+script = ExtResource("1_fluae")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l1015")
-animation = &"idle"
+animation = &"talk"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

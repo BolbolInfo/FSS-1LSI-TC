@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://n88d6ocj3xum"]
+[gd_scene load_steps=9 format=3 uid="uid://n88d6ocj3xum"]
 
 [ext_resource type="Texture2D" uid="uid://r6yaq0im2m18" path="res://templates/japanese-school_8x8-final.tileset.png" id="1_sntgh"]
 [ext_resource type="PackedScene" uid="uid://ddydb2wjt12l8" path="res://player.tscn" id="2_eqf0q"]
+[ext_resource type="Script" path="res://game_thinking_manager.gd" id="3_6x75o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j0j5u"]
 texture = ExtResource("1_sntgh")
@@ -215,6 +216,42 @@ texture = ExtResource("1_sntgh")
 [sub_resource type="TileSet" id="TileSet_jglfj"]
 sources/0 = SubResource("TileSetAtlasSource_j0j5u")
 
+[sub_resource type="Animation" id="Animation_w24vn"]
+resource_name = "move"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(96, 94), Vector2(154, 94)]
+}
+
+[sub_resource type="Animation" id="Animation_yo1dr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(96, 94)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j15sc"]
+_data = {
+"RESET": SubResource("Animation_yo1dr"),
+"move": SubResource("Animation_w24vn")
+}
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -224,8 +261,18 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-131078, 262144, 18, -65542, 262144, 18, -6, 262144, 18, 65530, 262144, 18, 131066, 262144, 18, 196602, 262144, 18, 262138, 262144, 18, -131077, 262144, 18, -65541, 262144, 18, -5, 262144, 18, 65531, 262144, 18, 131067, 262144, 18, 196603, 262144, 18, 262139, 262144, 18, -131076, 262144, 18, -65540, 262144, 18, -4, 262144, 18, 65532, 262144, 18, 131068, 262144, 18, 196604, 262144, 18, 262140, 262144, 18, -131075, 262144, 18, -65539, 262144, 18, -3, 262144, 18, 65533, 262144, 18, 131069, 262144, 18, 196605, 262144, 18, 262141, 262144, 18, -131074, 262144, 18, -65538, 262144, 18, -2, 262144, 18, 65534, 262144, 18, 131070, 262144, 18, 196606, 262144, 18, 262142, 262144, 18, -131073, 262144, 18, -65537, 262144, 18, -1, 262144, 18, 65535, 262144, 18, 131071, 262144, 18, 196607, 262144, 18, 262143, 262144, 18, -196608, 262144, 18, -131072, 262144, 18, -65536, 262144, 18, 0, 262144, 18, 65536, 262144, 18, 131072, 262144, 18, 196608, 262144, 18, -196607, 262144, 18, -131071, 262144, 18, -65535, 262144, 18, 1, 262144, 18, 65537, 262144, 18, 131073, 262144, 18, 196609, 262144, 18, -196606, 262144, 18, -131070, 262144, 18, -65534, 262144, 18, 2, 262144, 18, 65538, 262144, 18, 131074, 262144, 18, 196610, 262144, 18, -196605, 262144, 18, -131069, 262144, 18, -65533, 262144, 18, 3, 262144, 18, 65539, 262144, 18, 131075, 262144, 18, 196611, 262144, 18, -196604, 262144, 18, -131068, 262144, 18, -65532, 262144, 18, 4, 262144, 18, 65540, 262144, 18, 131076, 262144, 18, 196612, 262144, 18, -196603, 262144, 18, -131067, 262144, 18, -65531, 262144, 18, 5, 262144, 18, 65541, 262144, 18, 131077, 262144, 18, 196613, 262144, 18)
 
 [node name="player" parent="." instance=ExtResource("2_eqf0q")]
-position = Vector2(154, 94)
+unique_name_in_owner = true
+position = Vector2(96, 94)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(154, 94)
-zoom = Vector2(6, 6)
+position = Vector2(174, 80)
+zoom = Vector2(14, 14)
+
+[node name="game_thinking_manager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_6x75o")
+
+[node name="move_to_think_animator" type="AnimationPlayer" parent="game_thinking_manager"]
+libraries = {
+"": SubResource("AnimationLibrary_j15sc")
+}
