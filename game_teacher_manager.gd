@@ -9,3 +9,6 @@ func _ready() -> void:
 	player_move_to_teacher.play("move_to")
 	await player_move_to_teacher.animation_finished
 	player.stop_moving()
+	player.talk()
+	await get_tree().create_timer(2).timeout
+	SceneTrans.change_scene("res://computer_room.tscn")
