@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dle0qj3x74qjl"]
+[gd_scene load_steps=20 format=3 uid="uid://dle0qj3x74qjl"]
 
 [ext_resource type="Texture2D" uid="uid://blfx2c33apumi" path="res://templates/TopDownHouse_FloorsAndWalls.png" id="1_te55k"]
 [ext_resource type="Texture2D" uid="uid://dui4vk8tieb1w" path="res://templates/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="2_665in"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dsyo37bd7rtc8" path="res://templates/TopDownHouse_SmallItems.png" id="6_yrund"]
 [ext_resource type="Texture2D" uid="uid://b87m78aggcrks" path="res://templates/teacher.png" id="7_poc5h"]
 [ext_resource type="PackedScene" uid="uid://ddydb2wjt12l8" path="res://player.tscn" id="8_7tpla"]
+[ext_resource type="Script" path="res://game_teacher_manager.gd" id="9_gss6m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u8i10"]
 texture = ExtResource("1_te55k")
@@ -925,6 +926,43 @@ sources/3 = SubResource("TileSetAtlasSource_o8dim")
 sources/4 = SubResource("TileSetAtlasSource_b3mqq")
 sources/5 = SubResource("TileSetAtlasSource_4cqqd")
 
+[sub_resource type="Animation" id="Animation_xf465"]
+resource_name = "move_to"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(335, 401), Vector2(478, 401)]
+}
+
+[sub_resource type="Animation" id="Animation_m8a3t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(335, 401)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ydvur"]
+_data = {
+"RESET": SubResource("Animation_m8a3t"),
+"move_to": SubResource("Animation_xf465")
+}
+
 [node name="teacher_room" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -943,9 +981,19 @@ scale = Vector2(0.933223, 0.933223)
 texture = ExtResource("7_poc5h")
 
 [node name="player" parent="." instance=ExtResource("8_7tpla")]
-position = Vector2(485, 401)
+unique_name_in_owner = true
+position = Vector2(335, 401)
 scale = Vector2(1.00401, 1.00401)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(493, 382)
 zoom = Vector2(4.145, 4.145)
+
+[node name="game_teacher_manager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("9_gss6m")
+
+[node name="player_move_to_teacher" type="AnimationPlayer" parent="game_teacher_manager"]
+libraries = {
+"": SubResource("AnimationLibrary_ydvur")
+}
