@@ -1701,7 +1701,7 @@ tracks/10/keys = {
 
 [sub_resource type="Animation" id="Animation_ttldy"]
 resource_name = "movement"
-length = 20.0
+length = 25.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

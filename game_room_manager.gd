@@ -8,4 +8,4 @@ func _ready() -> void:
 	player.move_to_think()
 	player_animation.play("movement")
 	await player_animation.animation_finished
-	player.stop_moving()
+	SceneTrans.change_scene("res://phone.tscn")
