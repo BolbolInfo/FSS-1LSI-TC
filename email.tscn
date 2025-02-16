@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://40lisslcnerd"]
+
+[ext_resource type="Texture2D" uid="uid://dvfp7o4ifa0ra" path="res://templates/email.png" id="1_uc3me"]
+[ext_resource type="Script" path="res://email.gd" id="2_lx547"]
+
+[node name="email" type="Sprite2D"]
+scale = Vector2(0.286736, 0.286736)
+texture = ExtResource("1_uc3me")
+script = ExtResource("2_lx547")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

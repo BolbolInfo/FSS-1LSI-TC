@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cqi5q17bw06gj"]
+[gd_scene load_steps=34 format=3 uid="uid://cqi5q17bw06gj"]
 
 [ext_resource type="Texture2D" uid="uid://dsyo37bd7rtc8" path="res://templates/TopDownHouse_SmallItems.png" id="1_tctph"]
 [ext_resource type="Texture2D" uid="uid://3gjjn0gbwkwg" path="res://templates/TopDownHouse_DoorsAndWindows.png" id="2_76il1"]
@@ -10,9 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://cw3g4g7arrang" path="res://templates/TopDownHouse_FurnitureState2.png" id="8_rqvka"]
 [ext_resource type="Texture2D" uid="uid://blfx2c33apumi" path="res://templates/TopDownHouse_FloorsAndWalls.png" id="9_fro8k"]
 [ext_resource type="Texture2D" uid="uid://ekogpxirlbqd" path="res://templates/TopDownHouse_FurnitureState1.png" id="10_pxq6n"]
+[ext_resource type="Texture2D" uid="uid://b68356g6vgwec" path="res://templates/cv.png" id="11_1rpcq"]
 [ext_resource type="PackedScene" uid="uid://ddydb2wjt12l8" path="res://player.tscn" id="11_ftj60"]
 [ext_resource type="Script" path="res://game_room_manager.gd" id="12_5gn8p"]
+[ext_resource type="Texture2D" uid="uid://e2nr7qn0qotp" path="res://templates/tick.png" id="12_j431k"]
 [ext_resource type="Texture2D" uid="uid://dshq3ekf1knyu" path="res://templates/player_sit_back.png" id="13_pkled"]
+[ext_resource type="Texture2D" uid="uid://dckrxjiy3hmue" path="res://templates/mongela_2.png" id="14_y66xa"]
+[ext_resource type="Script" path="res://email_gen.gd" id="17_xvwa2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phlhk"]
 texture = ExtResource("1_tctph")
@@ -1560,58 +1564,6 @@ sources/11 = SubResource("TileSetAtlasSource_eug8b")
 sources/12 = SubResource("TileSetAtlasSource_rf30w")
 sources/13 = SubResource("TileSetAtlasSource_loh41")
 
-[sub_resource type="Animation" id="Animation_ttldy"]
-resource_name = "movement"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(509, 332), Vector2(580, 332)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("player:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("player_sit:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("chair/Sprite2D:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-
 [sub_resource type="Animation" id="Animation_fkcts"]
 length = 0.001
 tracks/0/type = "value"
@@ -1662,6 +1614,240 @@ tracks/3/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Camera2D:zoom")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6.615, 6.615)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Camera2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(607, 317)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("mongela_2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("mogela:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("cv:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(592, 312)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("cv:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.206573, 0.206573)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("cv:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ttldy"]
+resource_name = "movement"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(509, 332), Vector2(580, 332), Vector2(580, 332)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("player_sit:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("chair/Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Camera2D:zoom")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3, 5, 8, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6.615, 6.615), Vector2(27.035, 27.035), Vector2(27.035, 27.035), Vector2(6.615, 6.615)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Camera2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3, 5, 8, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(607, 317), Vector2(650, 295), Vector2(650, 295), Vector2(607, 317)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("mongela_2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(5, 7.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("mogela:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(5, 7.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("cv:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(10, 13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(592, 312), Vector2(592, 300)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("cv:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(10, 13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.206573, 0.206573), Vector2(0.377173, 0.377173)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("cv:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(13, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("email_gen")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(16.9667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"shoot_bubble"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6wxxd"]
 _data = {
@@ -1681,7 +1867,16 @@ layer_0/tile_data = PackedInt32Array(1441821, 10, 0, 1507357, 10, 0, 1572893, 10
 layer_1/name = "deco"
 layer_1/tile_data = PackedInt32Array(2621512, 6, 2, 2687048, 6, 3, 2621513, 65542, 2, 2687049, 65542, 3, 2621514, 131078, 2, 2687050, 131078, 3, 2818120, 655366, 2, 2883656, 655366, 3, 2818121, 720902, 2, 2883657, 720902, 3, 2818122, 786438, 2, 2883658, 786438, 3, 2555984, 196614, 7, 2621520, 196614, 8, 2687056, 196614, 9, 2621518, 196614, 0, 2687054, 196614, 1)
 layer_2/name = "chaie"
-layer_2/tile_data = PackedInt32Array(2359372, 524289, 3, 2424908, 524289, 4, 2359373, 589825, 3, 2424909, 589825, 4, 2424912, 327680, 1)
+layer_2/tile_data = PackedInt32Array(2359372, 524289, 3, 2424908, 524289, 4, 2359373, 589825, 3, 2424909, 589825, 4)
+
+[node name="cv" type="Sprite2D" parent="."]
+position = Vector2(592, 312)
+scale = Vector2(0.206573, 0.206573)
+texture = ExtResource("11_1rpcq")
+
+[node name="tick" type="Sprite2D" parent="cv"]
+position = Vector2(15.9078, 0)
+texture = ExtResource("12_j431k")
 
 [node name="monitor" type="Sprite2D" parent="."]
 position = Vector2(592, 313)
@@ -1767,3 +1962,18 @@ visible = false
 position = Vector2(-0.003, 0.475)
 scale = Vector2(6.025, 3.935)
 texture = SubResource("CanvasTexture_qdv5p")
+
+[node name="mogela" type="Sprite2D" parent="."]
+position = Vector2(650, 295)
+texture = ExtResource("1_tctph")
+region_enabled = true
+region_rect = Rect2(80, 16, 15, 15)
+
+[node name="mongela_2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(650, 295)
+texture = ExtResource("14_y66xa")
+
+[node name="email_gen" type="Marker2D" parent="."]
+position = Vector2(592, 315)
+script = ExtResource("17_xvwa2")
