@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cpeox80muissq"]
+[gd_scene load_steps=36 format=3 uid="uid://cpeox80muissq"]
 
 [ext_resource type="Texture2D" uid="uid://hah6rndhw2op" path="res://templates/wall_right.png" id="1_00vy3"]
 [ext_resource type="Texture2D" uid="uid://r6yaq0im2m18" path="res://templates/japanese-school_8x8-final.tileset.png" id="1_dd6p5"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://dwy6l8j72mpko" path="res://templates/head5.png" id="11_k5pkl"]
 [ext_resource type="Texture2D" uid="uid://nqhwq8sr2ill" path="res://templates/head6.png" id="12_wdpjl"]
 [ext_resource type="Texture2D" uid="uid://b27cwa3lrdi6" path="res://templates/head7.png" id="13_ge5u0"]
-[ext_resource type="Texture2D" uid="uid://dlc2dxomqj57t" path="res://templates/fss.png" id="16_ja6u4"]
 [ext_resource type="Script" path="res://game_manager.gd" id="18_32tls"]
 [ext_resource type="Texture2D" uid="uid://25rppj6auubt" path="res://templates/for9e3a_1.png" id="19_68xm7"]
 [ext_resource type="Texture2D" uid="uid://bwgp6yqtqcmj1" path="res://templates/for9e3a_4.png" id="20_qumsf"]
@@ -955,6 +954,7 @@ turbulence_noise_scale = 6.263
 turbulence_noise_speed_random = 1.0
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(-25, -91)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_e3708")
@@ -1259,10 +1259,14 @@ texture = ExtResource("6_txygj")
 
 [node name="Sprite2D2" type="Sprite2D" parent="TileMap"]
 
-[node name="fss" type="Sprite2D" parent="TileMap"]
-position = Vector2(624, 282)
-scale = Vector2(1.8664, 1.42031)
-texture = ExtResource("16_ja6u4")
+[node name="Label" type="Label" parent="TileMap"]
+offset_left = 595.0
+offset_top = 264.0
+offset_right = 744.0
+offset_bottom = 287.0
+scale = Vector2(1.14406, 1.15008)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "F.S.S  GRADUATION"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(687, 328)

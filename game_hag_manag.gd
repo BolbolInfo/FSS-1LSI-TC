@@ -11,3 +11,5 @@ func _ready() -> void:
 	animation_player.play("move")
 	await  animation_player.animation_finished
 	player.talk()
+	await get_tree().create_timer(2).timeout
+	SceneTrans.change_scene("res://entretient.tscn")
