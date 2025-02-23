@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dle0qj3x74qjl"]
+[gd_scene load_steps=23 format=3 uid="uid://dle0qj3x74qjl"]
 
 [ext_resource type="Texture2D" uid="uid://blfx2c33apumi" path="res://templates/TopDownHouse_FloorsAndWalls.png" id="1_te55k"]
 [ext_resource type="Texture2D" uid="uid://dui4vk8tieb1w" path="res://templates/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="2_665in"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://b87m78aggcrks" path="res://templates/teacher.png" id="7_poc5h"]
 [ext_resource type="PackedScene" uid="uid://ddydb2wjt12l8" path="res://player.tscn" id="8_7tpla"]
 [ext_resource type="Script" path="res://game_teacher_manager.gd" id="9_gss6m"]
+[ext_resource type="FontFile" uid="uid://drgsggwf6dvuh" path="res://templates/font/monogram-extended.ttf" id="10_dmq8g"]
+[ext_resource type="Script" path="res://player_talk_to_teacher.gd" id="10_kg7c7"]
+[ext_resource type="Script" path="res://teacher_talk.gd" id="12_sjrn6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u8i10"]
 texture = ExtResource("1_te55k")
@@ -990,10 +993,29 @@ position = Vector2(493, 382)
 zoom = Vector2(4.145, 4.145)
 
 [node name="game_teacher_manager" type="Node" parent="."]
-unique_name_in_owner = true
 script = ExtResource("9_gss6m")
 
 [node name="player_move_to_teacher" type="AnimationPlayer" parent="game_teacher_manager"]
 libraries = {
 "": SubResource("AnimationLibrary_ydvur")
 }
+
+[node name="player_talk_to_teacher" type="Label" parent="."]
+offset_left = 525.0
+offset_top = 367.0
+offset_right = 664.0
+offset_bottom = 489.0
+scale = Vector2(0.468552, 0.468552)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_dmq8g")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("10_kg7c7")
+
+[node name="teacher_talk" type="Label" parent="."]
+offset_left = 470.0
+offset_top = 337.0
+offset_right = 510.0
+offset_bottom = 360.0
+script = ExtResource("12_sjrn6")

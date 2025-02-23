@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://n88d6ocj3xum"]
+[gd_scene load_steps=11 format=3 uid="uid://n88d6ocj3xum"]
 
 [ext_resource type="Texture2D" uid="uid://r6yaq0im2m18" path="res://templates/japanese-school_8x8-final.tileset.png" id="1_sntgh"]
 [ext_resource type="PackedScene" uid="uid://ddydb2wjt12l8" path="res://player.tscn" id="2_eqf0q"]
 [ext_resource type="Script" path="res://game_thinking_manager.gd" id="3_6x75o"]
+[ext_resource type="FontFile" uid="uid://drgsggwf6dvuh" path="res://templates/font/monogram-extended.ttf" id="4_qkrjo"]
+[ext_resource type="Script" path="res://thinking_label.gd" id="5_wyppw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j0j5u"]
 texture = ExtResource("1_sntgh")
@@ -276,3 +278,17 @@ script = ExtResource("3_6x75o")
 libraries = {
 "": SubResource("AnimationLibrary_j15sc")
 }
+
+[node name="thinking_label" type="Label" parent="."]
+offset_left = 162.0
+offset_top = 62.0
+offset_right = 293.0
+offset_bottom = 164.0
+scale = Vector2(0.382917, 0.382917)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_qkrjo")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("5_wyppw")
