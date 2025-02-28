@@ -18,4 +18,6 @@ var content_text=[
 ]
 
 func techer_talk():
-	pass
+	for i in range(len(content_text)):
+		text = content_text[i]["text"]
+		await get_tree().create_timer(content_text[i]["time"]).timeout

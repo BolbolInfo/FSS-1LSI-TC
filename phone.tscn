@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cw7ec5kgthbm5"]
+[gd_scene load_steps=12 format=3 uid="uid://cw7ec5kgthbm5"]
 
 [ext_resource type="Texture2D" uid="uid://brpj7t5em1inu" path="res://templates/7it.png" id="1_1uypo"]
 [ext_resource type="Texture2D" uid="uid://b5dsdw624rdmr" path="res://templates/phone_screen.png" id="1_yukwu"]
 [ext_resource type="Texture2D" uid="uid://e2nr7qn0qotp" path="res://templates/tick.png" id="2_t21bt"]
 [ext_resource type="Texture2D" uid="uid://da5rttai3vkbt" path="res://templates/pop_up.png" id="3_fa7jt"]
 [ext_resource type="Script" path="res://game_phone_manag.gd" id="5_71yir"]
+[ext_resource type="FontFile" uid="uid://drgsggwf6dvuh" path="res://templates/font/monogram-extended.ttf" id="5_kkwiv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trpmw"]
 texture = ExtResource("1_1uypo")
@@ -117,11 +118,22 @@ zoom = Vector2(17.435, 17.435)
 visible = false
 offset_left = 61.0
 offset_top = 21.0
-offset_right = 131.0
-offset_bottom = 44.0
+offset_right = 285.0
+offset_bottom = 242.0
 scale = Vector2(0.111418, 0.111418)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "accepted"
+theme_override_fonts/font = ExtResource("5_kkwiv")
+text = "Confirmation de l’entretien – ingenieur d'informatique 
+
+Bonjour hsan ben adi,
+
+Merci pour cette opportunité. Je confirme ma disponibilité pour l’entretien le 17 septembre à 9h. N’hésitez pas à me faire savoir si vous avez besoin d’informations supplémentaires.
+
+Dans l’attente de notre échange,
+google HR"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="game_phone_manag" type="Node" parent="."]
 script = ExtResource("5_71yir")

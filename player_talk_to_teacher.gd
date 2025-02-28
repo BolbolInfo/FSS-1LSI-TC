@@ -1,4 +1,5 @@
 extends Label
+@onready var teacher_talk = $"../teacher_talk"
 
 var content_text=[
 	{"text":"Bonjour, Madame Souhir. Est-ce que je peux vous déranger un instant ?","time":3},
@@ -12,3 +13,4 @@ func transform():
 	for i in range(len(content_text)):
 		text = content_text[i]["text"]
 		await get_tree().create_timer(content_text[i]["time"]).timeout
+	await teacher_talk.techer_talk()
