@@ -22,4 +22,5 @@ func walk_cost():
 	animated_sprite_2d.play("walk_cos")
 func talk_cos():
 	animated_sprite_2d.play("talk_cos")
-	
+func stop_moving_cos():
+	animated_sprite_2d.play("idle_cos")

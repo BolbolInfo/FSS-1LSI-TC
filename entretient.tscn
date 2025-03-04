@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cji6bk2vgtlh7"]
+[gd_scene load_steps=33 format=3 uid="uid://cji6bk2vgtlh7"]
 
 [ext_resource type="Texture2D" uid="uid://r6yaq0im2m18" path="res://templates/japanese-school_8x8-final.tileset.png" id="1_pyxcj"]
 [ext_resource type="Texture2D" uid="uid://3gjjn0gbwkwg" path="res://templates/TopDownHouse_DoorsAndWindows.png" id="2_66vtd"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ddydb2wjt12l8" path="res://player.tscn" id="9_xa6ni"]
 [ext_resource type="Script" path="res://game_entre_manag.gd" id="10_58s8g"]
 [ext_resource type="Texture2D" uid="uid://0dliey2i7kp4" path="res://templates/player_sit_back_cos.png" id="11_ys216"]
+[ext_resource type="FontFile" uid="uid://drgsggwf6dvuh" path="res://templates/font/monogram-extended.ttf" id="13_38bwk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqa6y"]
 texture = ExtResource("1_pyxcj")
@@ -4336,6 +4337,54 @@ _data = {
 "move": SubResource("Animation_haaxd")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2acir"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxq5e"]
+bg_color = Color(0, 0.513726, 0.780392, 1)
+border_width_left = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0, 0.364706, 0.466667, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_color = Color(0.46712, 0.765718, 1, 1)
+shadow_size = 1
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vfll4"]
+bg_color = Color(7.70092e-07, 0.514507, 0.782169, 1)
+border_width_left = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(1.44392e-06, 0.365304, 0.467891, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvexc"]
+bg_color = Color(0, 0.322391, 0.499344, 1)
+border_width_left = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(1.39579e-06, 0.301376, 0.477571, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_color = Color(2.98411e-06, 0.528463, 0.81693, 1)
+shadow_size = 1
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="Theme" id="Theme_mbguu"]
+Button/styles/focus = SubResource("StyleBoxFlat_2acir")
+Button/styles/hover = SubResource("StyleBoxFlat_oxq5e")
+Button/styles/normal = SubResource("StyleBoxFlat_vfll4")
+Button/styles/pressed = SubResource("StyleBoxFlat_fvexc")
+
 [node name="entretient" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -4398,3 +4447,58 @@ scale = Vector2(1.34631, 1.34631)
 texture = ExtResource("11_ys216")
 region_enabled = true
 region_rect = Rect2(0, 0, 13, 12)
+
+[node name="player_enter" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 402.0
+offset_top = 138.0
+offset_right = 494.0
+offset_bottom = 196.0
+scale = Vector2(0.673579, 0.673579)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_38bwk")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="player_enter_teacher" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 428.0
+offset_top = 115.0
+offset_right = 566.0
+offset_bottom = 176.0
+scale = Vector2(0.673579, 0.673579)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_38bwk")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_mbguu")
+
+[node name="choice_1" type="Button" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 413.0
+offset_top = 194.0
+offset_right = 517.0
+offset_bottom = 215.0
+scale = Vector2(0.575654, 0.575654)
+theme_override_fonts/font = ExtResource("13_38bwk")
+text = "aaaaaaaaaaaaaaaa"
+
+[node name="choice_2" type="Button" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 509.0
+offset_top = 194.0
+offset_right = 613.0
+offset_bottom = 215.0
+scale = Vector2(0.575654, 0.575654)
+theme_override_fonts/font = ExtResource("13_38bwk")
+text = "aaaaaaaaaaaaaaaa"

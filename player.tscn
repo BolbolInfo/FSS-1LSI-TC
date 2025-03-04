@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://ddydb2wjt12l8"]
+[gd_scene load_steps=53 format=3 uid="uid://ddydb2wjt12l8"]
 
 [ext_resource type="Texture2D" uid="uid://dlkhf7schohck" path="res://templates/Clothes 3/Character1M_3_idle_0.png" id="1_3xa24"]
 [ext_resource type="Script" path="res://player.gd" id="1_fluae"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ctq48onmxksc5" path="res://templates/Clothes 3/Character1M_3_idle_6.png" id="7_mi66d"]
 [ext_resource type="Texture2D" uid="uid://dmo176vyeipiy" path="res://templates/Clothes 3/Character1M_3_idle_7.png" id="8_8vjoi"]
 [ext_resource type="Texture2D" uid="uid://80kep0il37rh" path="res://templates/Clothes 3/Character1M_3_talk_0.png" id="9_52nxi"]
+[ext_resource type="Texture2D" uid="uid://b0bre5xwef8uo" path="res://templates/player_cos-idle.png" id="10_htq35"]
 [ext_resource type="Texture2D" uid="uid://dft6gbbqpymb0" path="res://templates/Clothes 3/Character1M_3_talk_1.png" id="10_sq1xo"]
 [ext_resource type="Texture2D" uid="uid://clnmv8qylw8qk" path="res://templates/Clothes 3/Character1M_3_talk_2.png" id="11_wy7og"]
 [ext_resource type="Texture2D" uid="uid://cyud58u4loi8r" path="res://templates/Clothes 3/Character1M_3_talk_3.png" id="12_8ppd4"]
@@ -26,6 +27,38 @@
 [ext_resource type="Texture2D" uid="uid://c534mwcdasky3" path="res://templates/Clothes 3/Character1M_3_walk_6.png" id="22_wp522"]
 [ext_resource type="Texture2D" uid="uid://vlvbf8o7nmb4" path="res://templates/Clothes 3/Character1M_3_walk_7.png" id="23_c3n72"]
 [ext_resource type="Texture2D" uid="uid://b0lpv8vsh6xuo" path="res://templates/player_costum.png" id="25_ed5gi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m64dn"]
+atlas = ExtResource("10_htq35")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2xj6"]
+atlas = ExtResource("10_htq35")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpnhj"]
+atlas = ExtResource("10_htq35")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyjnv"]
+atlas = ExtResource("10_htq35")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d681x"]
+atlas = ExtResource("10_htq35")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sev7j"]
+atlas = ExtResource("10_htq35")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsfon"]
+atlas = ExtResource("10_htq35")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8s6b6"]
+atlas = ExtResource("10_htq35")
+region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_80l01"]
 atlas = ExtResource("17_dubpl")
@@ -116,6 +149,35 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m64dn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2xj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpnhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyjnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d681x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sev7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsfon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8s6b6")
+}],
+"loop": true,
+"name": &"idle_cos",
 "speed": 15.0
 }, {
 "frames": [{
@@ -238,9 +300,10 @@ script = ExtResource("1_fluae")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l1015")
-animation = &"talk_cos"
+animation = &"idle_cos"
 autoplay = "idle"
-frame_progress = 0.523676
+frame = 1
+frame_progress = 0.98931
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.25)
