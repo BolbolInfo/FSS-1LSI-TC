@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7bakck6l4a7y"
+path="res://.godot/imported/teacher_3_0.mp3-3d50228d384ed1fd3025a6d0bd6fe05c.mp3str"
+
+[deps]
+
+source_file="res://voice/teacher room/teacher_3_0.mp3"
+dest_files=["res://.godot/imported/teacher_3_0.mp3-3d50228d384ed1fd3025a6d0bd6fe05c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

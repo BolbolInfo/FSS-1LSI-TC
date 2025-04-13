@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dle0qj3x74qjl"]
+[gd_scene load_steps=60 format=3 uid="uid://dle0qj3x74qjl"]
 
 [ext_resource type="Texture2D" uid="uid://blfx2c33apumi" path="res://templates/TopDownHouse_FloorsAndWalls.png" id="1_te55k"]
 [ext_resource type="Texture2D" uid="uid://dui4vk8tieb1w" path="res://templates/TopDownHouse_FloorsAndWalls_OpenDoors.png" id="2_665in"]
@@ -12,6 +12,38 @@
 [ext_resource type="FontFile" uid="uid://drgsggwf6dvuh" path="res://templates/font/monogram-extended.ttf" id="10_dmq8g"]
 [ext_resource type="Script" path="res://player_talk_to_teacher.gd" id="10_kg7c7"]
 [ext_resource type="Script" path="res://teacher_talk.gd" id="12_sjrn6"]
+[ext_resource type="AudioStream" uid="uid://xdg28gex4nhk" path="res://voice/teacher room/bnj_0.mp3" id="13_lo8mh"]
+[ext_resource type="AudioStream" uid="uid://h0ovm2dol4a7" path="res://voice/teacher room/bnj_1.mp3" id="14_vee1h"]
+[ext_resource type="AudioStream" uid="uid://dhedq1qb33n4l" path="res://voice/teacher room/me_1_0.mp3" id="15_so144"]
+[ext_resource type="AudioStream" uid="uid://djhtfg48cfbid" path="res://voice/teacher room/me_1_1.mp3" id="16_momlr"]
+[ext_resource type="AudioStream" uid="uid://er60wd6arpvg" path="res://voice/teacher room/me_2.mp3" id="17_mkt3m"]
+[ext_resource type="AudioStream" uid="uid://n4p7kmwpt8jf" path="res://voice/teacher room/me_3_0.mp3" id="18_l1pwa"]
+[ext_resource type="AudioStream" uid="uid://c2umwi0ayar1c" path="res://voice/teacher room/me_3_1.mp3" id="19_fp2hl"]
+[ext_resource type="AudioStream" uid="uid://c5ngbdrng8p6c" path="res://voice/teacher room/me_4_0.mp3" id="20_m7ycp"]
+[ext_resource type="AudioStream" uid="uid://c1ogth44lfq0e" path="res://voice/teacher room/me_4_1.mp3" id="21_udbl7"]
+[ext_resource type="AudioStream" uid="uid://joht7uuh4wu8" path="res://voice/teacher room/me_5_0.mp3" id="22_8470g"]
+[ext_resource type="AudioStream" uid="uid://p52l576f46rw" path="res://voice/teacher room/me_ne9s.mp3" id="22_a4eue"]
+[ext_resource type="AudioStream" uid="uid://ce87slkghw82k" path="res://voice/teacher room/me_5_1.mp3" id="23_j3bjm"]
+[ext_resource type="AudioStream" uid="uid://cjb8daiixfurf" path="res://voice/teacher room/me_5_2.mp3" id="24_f4sfr"]
+[ext_resource type="AudioStream" uid="uid://btg7u2ym8l7k8" path="res://voice/teacher room/teacher_1_0.mp3" id="25_71cvt"]
+[ext_resource type="AudioStream" uid="uid://bg5m16nvsjpxr" path="res://voice/teacher room/teacher_1_1.mp3" id="26_y5tt6"]
+[ext_resource type="AudioStream" uid="uid://dhbmgw4r0ep66" path="res://voice/teacher room/teacher_2_0.mp3" id="27_oncov"]
+[ext_resource type="AudioStream" uid="uid://co0fk6i3f5die" path="res://voice/teacher room/teacher_2_1.mp3" id="28_sgpt2"]
+[ext_resource type="AudioStream" uid="uid://cq2oq7ysnskwa" path="res://voice/teacher room/teacher_2_2.mp3" id="29_0ua7b"]
+[ext_resource type="AudioStream" uid="uid://c7bakck6l4a7y" path="res://voice/teacher room/teacher_3_0.mp3" id="30_30gm3"]
+[ext_resource type="AudioStream" uid="uid://c7ywh3dls281f" path="res://voice/teacher room/teacher_3_1.mp3" id="31_ukqie"]
+[ext_resource type="AudioStream" uid="uid://n5hc71ob42fj" path="res://voice/teacher room/teacher_4_0.mp3" id="32_b1nvg"]
+[ext_resource type="AudioStream" uid="uid://diymx4dh6fhph" path="res://voice/teacher room/teacher_4_1.mp3" id="33_gpu4s"]
+[ext_resource type="AudioStream" uid="uid://cfnxje3yioedp" path="res://voice/teacher room/teacher_4_2.mp3" id="34_foojm"]
+[ext_resource type="AudioStream" uid="uid://oso0drhqk2jl" path="res://voice/teacher room/teacher_4_3.mp3" id="35_wopmb"]
+[ext_resource type="AudioStream" uid="uid://cnmrbcg4oeycd" path="res://voice/teacher room/teacher_4_4.mp3" id="36_k1gq7"]
+[ext_resource type="AudioStream" uid="uid://bx30tjq8mc1fp" path="res://voice/teacher room/teacher_4_5.mp3" id="37_nx3id"]
+[ext_resource type="AudioStream" uid="uid://bd8kjptkpvf2l" path="res://voice/teacher room/teacher_4_6.mp3" id="38_hn0iu"]
+[ext_resource type="AudioStream" uid="uid://by3qt33f33hl7" path="res://voice/teacher room/teacher_4_7.mp3" id="39_ojjkj"]
+[ext_resource type="AudioStream" uid="uid://bjo38wcdnfnnr" path="res://voice/teacher room/teacher_5_0.mp3" id="40_313qk"]
+[ext_resource type="AudioStream" uid="uid://c7t8r64cncpqd" path="res://voice/teacher room/teacher_5_1.mp3" id="41_fx8ue"]
+[ext_resource type="AudioStream" uid="uid://de1ugveit7enu" path="res://voice/teacher room/teacher_bnj_0.mp3" id="42_jtb0k"]
+[ext_resource type="AudioStream" uid="uid://cfli8lc11bp77" path="res://voice/teacher room/teacher_bnj_1.mp3" id="43_0q2kk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u8i10"]
 texture = ExtResource("1_te55k")
@@ -966,6 +998,801 @@ _data = {
 "move_to": SubResource("Animation_xf465")
 }
 
+[sub_resource type="Animation" id="Animation_574h4"]
+resource_name = "dialog"
+length = 120.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../player_talk_to_teacher:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.95184, 6.66667, 15.079, 21.3489, 30.3425, 41.8333, 47.2349, 57.0115, 60.3744, 108.611, 115.049),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Bonjour, Madame Souhir. Est-ce que je peux vous déranger un instant ?", "", "Je vais bien, merci. Je suis venu vous voir parce que je viens d’être diplômé, et honnêtement, je ne sais pas par où commencer pour trouver un emploi.", "", "Oui, idéalement, j’aimerais travailler dans le développement logiciel ou l’analyse des données, mais je ne sais pas comment chercher efficacement ni comment me présenter aux employeurs.", "", "Justement, non... Je n’ai pas encore de CV et je ne sais pas vraiment comment en faire un.", "", "D’accord… Mais que dois-je y inclure exactement ?", "", "Très bien ! Je vais essayer d’en faire un,merci infiniment, Madame Souhir ! Votre aide m’est précieuse.", ""]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../voice/Bnj0:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../voice/Bnj1:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.76667, 4.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../teacher_talk:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.06667, 6.66667, 15.0667, 21.3489, 30.3425, 41.8333, 47.2349, 57.0115, 60.3744, 63.0667, 69.0333, 77.1333, 82.1667, 87.3103, 94.6479, 102.541, 108.611, 115.049),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["", "Bien sûr ! Comment vas-tu ?", "", "Je comprends, c'est une étape importante. As-tu déjà une idée du type de travail que tu aimerais faire ?", "", "C’est un bon début ! La première chose à faire est d’avoir un CV bien structuré et une lettre de motivation adaptée à chaque offre d’emploi. As-tu déjà préparé ces documents ?", "", "Ne t’inquiète pas, c’est normal au début ! Un CV doit être clair, structuré et mettre en valeur tes compétences et expériences, même si tu n’as pas encore travaillé.", "", "Voici les sections essentielles :", "1)Informations personnelles : Ton nom, numéro de téléphone, adresse e-mail.", "2)Titre du CV : Un résumé rapide de ton objectif professionnel, par exemple 'Développeur junior en informatique'.", "3)Formation : Les études que tu as suivies, avec les dates et le diplôme obtenu. ", "4)Compétences : Liste tes compétences techniques et linguistique", "5)Expériences : Même si tu n’as pas encore travaillé, mentionne tes stages, projets académiques ou travaux personnels.", " 6)Certifications et formations supplémentaires : Si tu as suivi des cours en ligne ou obtenu des certifications, ajoute-les.", "7)Centres d’intérêt : Cela peut montrer ta personnalité et ton esprit d’initiative.", "", "C’est normal! Bon courage, et tiens-moi au courant."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../voice/TeacherBnj0:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(4.08007, 5.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../voice/TeacherBnj1:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(5.23017, 6.76667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../voice/Me10:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(6.66667, 8.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../voice/Me11:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(8.6005, 15.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../voice/Teacher10:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(15.0667, 18.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../voice/Teacher11:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(17.7779, 21.5333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../voice/Me2:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(21.3489, 30.5667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../voice/Teacher20:playing")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(30.3425, 32.4333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../voice/Teacher21:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(32.4057, 39),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../voice/Teacher22:playing")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(38.8859, 41.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../voice/Me30:playing")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(41.8333, 43.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../voice/Me31:playing")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(43.6, 47.2349),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../voice/Teacher30:playing")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(47.2349, 49.9155),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../voice/Teacher31:playing")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(49.9155, 57.0115),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../voice/MeNe9s:playing")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(57.0115, 60.3744),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../voice/Teacher40:playing")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(60.3744, 62.9812),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../voice/Teacher41:playing")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(62.9812, 69.0333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../voice/Teacher42:playing")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(69.0333, 77.4667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../voice/Teacher43:playing")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(77.4667, 82.6333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../voice/Teacher44:playing")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(82.6333, 87.5333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../voice/Teacher45:playing")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(87.5333, 94.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../voice/Teacher46:playing")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(94.8, 102.867),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../voice/Teacher47:playing")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(102.867, 108.833),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../voice/Me50:playing")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(108.611, 109.695),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("../voice/Me51:playing")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(109.695, 113.299),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("../voice/Me52:playing")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(113.299, 115.049),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("../voice/Teacher50:playing")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(115.049, 116.606),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("../voice/Teacher51:playing")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(116.606, 118.979),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_8ru4m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../player_talk_to_teacher:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../voice/Bnj0:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../voice/Bnj1:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../teacher_talk:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../voice/TeacherBnj0:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../voice/TeacherBnj1:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../voice/Me10:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../voice/Me11:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../voice/Teacher10:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../voice/Teacher11:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../voice/Me2:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../voice/Teacher20:playing")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../voice/Teacher21:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../voice/Teacher22:playing")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../voice/Me30:playing")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../voice/Me31:playing")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../voice/Teacher30:playing")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../voice/Teacher31:playing")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../voice/MeNe9s:playing")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../voice/Teacher40:playing")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../voice/Teacher41:playing")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../voice/Teacher42:playing")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../voice/Teacher43:playing")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../voice/Teacher44:playing")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../voice/Teacher45:playing")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../voice/Teacher46:playing")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../voice/Teacher47:playing")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../voice/Me50:playing")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("../voice/Me51:playing")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("../voice/Me52:playing")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("../voice/Teacher50:playing")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("../voice/Teacher51:playing")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5sk05"]
+_data = {
+"RESET": SubResource("Animation_8ru4m"),
+"dialog": SubResource("Animation_574h4")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jq6et"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0uq6"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [node name="teacher_room" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1000,6 +1827,11 @@ libraries = {
 "": SubResource("AnimationLibrary_ydvur")
 }
 
+[node name="dialog_animation" type="AnimationPlayer" parent="game_teacher_manager"]
+libraries = {
+"": SubResource("AnimationLibrary_5sk05")
+}
+
 [node name="player_talk_to_teacher" type="Label" parent="."]
 offset_left = 525.0
 offset_top = 367.0
@@ -1008,6 +1840,7 @@ offset_bottom = 489.0
 scale = Vector2(0.468552, 0.468552)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_dmq8g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jq6et")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -1015,13 +1848,144 @@ script = ExtResource("10_kg7c7")
 
 [node name="teacher_talk" type="Label" parent="."]
 offset_left = 444.0
-offset_top = 316.0
+offset_top = 311.0
 offset_right = 660.0
-offset_bottom = 446.0
+offset_bottom = 441.0
 scale = Vector2(0.421337, 0.421337)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_dmq8g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_f0uq6")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 script = ExtResource("12_sjrn6")
+
+[node name="voice" type="Node" parent="."]
+
+[node name="Bnj0" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("13_lo8mh")
+bus = &"voice line"
+
+[node name="Bnj1" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("14_vee1h")
+bus = &"voice line"
+
+[node name="Me10" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("15_so144")
+bus = &"voice line"
+
+[node name="Me11" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("16_momlr")
+bus = &"voice line"
+
+[node name="Me2" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("17_mkt3m")
+bus = &"voice line"
+
+[node name="Me30" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("18_l1pwa")
+bus = &"voice line"
+
+[node name="Me31" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("19_fp2hl")
+bus = &"voice line"
+
+[node name="Me40" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("20_m7ycp")
+bus = &"voice line"
+
+[node name="Me41" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("21_udbl7")
+bus = &"voice line"
+
+[node name="MeNe9s" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("22_a4eue")
+bus = &"voice line"
+
+[node name="Me50" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("22_8470g")
+bus = &"voice line"
+
+[node name="Me51" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("23_j3bjm")
+bus = &"voice line"
+
+[node name="Me52" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("24_f4sfr")
+bus = &"voice line"
+
+[node name="Teacher10" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("25_71cvt")
+bus = &"voice line"
+
+[node name="Teacher11" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("26_y5tt6")
+bus = &"voice line"
+
+[node name="Teacher20" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("27_oncov")
+bus = &"voice line"
+
+[node name="Teacher21" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("28_sgpt2")
+bus = &"voice line"
+
+[node name="Teacher22" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("29_0ua7b")
+bus = &"voice line"
+
+[node name="Teacher30" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("30_30gm3")
+bus = &"voice line"
+
+[node name="Teacher31" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("31_ukqie")
+bus = &"voice line"
+
+[node name="Teacher40" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("32_b1nvg")
+bus = &"voice line"
+
+[node name="Teacher41" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("33_gpu4s")
+bus = &"voice line"
+
+[node name="Teacher42" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("34_foojm")
+bus = &"voice line"
+
+[node name="Teacher43" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("35_wopmb")
+bus = &"voice line"
+
+[node name="Teacher44" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("36_k1gq7")
+bus = &"voice line"
+
+[node name="Teacher45" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("37_nx3id")
+bus = &"voice line"
+
+[node name="Teacher46" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("38_hn0iu")
+bus = &"voice line"
+
+[node name="Teacher47" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("39_ojjkj")
+bus = &"voice line"
+
+[node name="Teacher50" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("40_313qk")
+bus = &"voice line"
+
+[node name="Teacher51" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("41_fx8ue")
+bus = &"voice line"
+
+[node name="TeacherBnj0" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("42_jtb0k")
+bus = &"voice line"
+
+[node name="TeacherBnj1" type="AudioStreamPlayer" parent="voice"]
+stream = ExtResource("43_0q2kk")
+bus = &"voice line"

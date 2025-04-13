@@ -1,5 +1,6 @@
 extends Label
 @onready var teacher_talk = $"../teacher_talk"
+@onready var player: CharacterBody2D = %player
 
 var content_text=[
 	{"text":"Bonjour, Madame Souhir. Est-ce que je peux vous déranger un instant ?","time":3},
@@ -14,3 +15,8 @@ func transform():
 		text = content_text[i]["text"]
 		await get_tree().create_timer(content_text[i]["time"]).timeout
 	await teacher_talk.techer_talk()
+func _process(delta: float) -> void:
+	if text=="":
+		visible = false
+	else:
+		visible=true

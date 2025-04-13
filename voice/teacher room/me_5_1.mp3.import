@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ce87slkghw82k"
+path="res://.godot/imported/me_5_1.mp3-50a0c226fc2adea6e22aec2603564421.mp3str"
+
+[deps]
+
+source_file="res://voice/teacher room/me_5_1.mp3"
+dest_files=["res://.godot/imported/me_5_1.mp3-50a0c226fc2adea6e22aec2603564421.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
