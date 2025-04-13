@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cji6bk2vgtlh7"]
+[gd_scene load_steps=35 format=3 uid="uid://cji6bk2vgtlh7"]
 
 [ext_resource type="Texture2D" uid="uid://r6yaq0im2m18" path="res://templates/japanese-school_8x8-final.tileset.png" id="1_pyxcj"]
 [ext_resource type="Texture2D" uid="uid://3gjjn0gbwkwg" path="res://templates/TopDownHouse_DoorsAndWindows.png" id="2_66vtd"]
@@ -4337,6 +4337,20 @@ _data = {
 "move": SubResource("Animation_haaxd")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7i85"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pouic"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2acir"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
@@ -4419,6 +4433,7 @@ region_rect = Rect2(0, 0, 16, 25)
 
 [node name="player" parent="." instance=ExtResource("9_xa6ni")]
 unique_name_in_owner = true
+z_index = 1
 position = Vector2(407, 190)
 scale = Vector2(1.07646, 1.07646)
 
@@ -4453,24 +4468,26 @@ region_rect = Rect2(0, 0, 13, 12)
 unique_name_in_owner = true
 offset_left = 402.0
 offset_top = 138.0
-offset_right = 494.0
-offset_bottom = 196.0
-scale = Vector2(0.673579, 0.673579)
+offset_right = 531.0
+offset_bottom = 263.0
+scale = Vector2(0.373634, 0.373634)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_38bwk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j7i85")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="player_enter_teacher" type="Label" parent="."]
 unique_name_in_owner = true
-offset_left = 428.0
-offset_top = 115.0
-offset_right = 566.0
-offset_bottom = 176.0
-scale = Vector2(0.673579, 0.673579)
+offset_left = 446.0
+offset_top = 117.0
+offset_right = 584.0
+offset_bottom = 226.0
+scale = Vector2(0.34647, 0.34647)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_38bwk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pouic")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -4491,7 +4508,6 @@ offset_right = 514.0
 offset_bottom = 240.0
 scale = Vector2(0.575654, 0.575654)
 theme_override_fonts/font = ExtResource("13_38bwk")
-text = "Oui, pas de problème pour trouver, tout était bien indiqué"
 text_overrun_behavior = 4
 autowrap_mode = 2
 
@@ -4504,10 +4520,14 @@ offset_right = 617.0
 offset_bottom = 240.0
 scale = Vector2(0.575654, 0.575654)
 theme_override_fonts/font = ExtResource("13_38bwk")
-text = "bien sûr ! Je suis diplômé en informatique de faculte des science sfax . J’ai une passion pour le développement logiciel et l’intelligence artificielle. Pendant mes études, j’ai travaillé sur plusieurs projets académiques et personnels, notamment expence-tracker app . J’aime résoudre des problèmes complexes et travailler en équipe sur des projets innovants
-"
 text_overrun_behavior = 4
 autowrap_mode = 2
+
+[node name="voice" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="voice"]
+unique_name_in_owner = true
+bus = &"voice line"
 
 [connection signal="pressed" from="Control/choice_1" to="game_entre_manag" method="_on_choice_1_pressed"]
 [connection signal="pressed" from="Control/choice_2" to="game_entre_manag" method="_on_choice_2_pressed"]

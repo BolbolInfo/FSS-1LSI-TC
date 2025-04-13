@@ -8,6 +8,7 @@ extends Node
 @onready var player_enter_teacher = %player_enter_teacher
 @onready var choice_1 = %choice_1
 @onready var choice_2 = %choice_2
+@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 
 var index = 0
 var choice_made = 0  # Tracks which choice the player made
@@ -63,6 +64,51 @@ var dialog_list = [
 	 "Merci pour votre temps."]
 ]
 
+
+var dialog_audio = [
+	[
+		["res://voice/entretient/dialog/0/me/me_c1_0.mp3","res://voice/entretient/dialog/0/me/me_c1_1.mp3"],["res://voice/entretient/dialog/0/me/me_c2.mp3"],
+		["res://voice/entretient/dialog/0/hr/hr_c1_0.mp3","res://voice/entretient/dialog/0/hr/hr_c1_1.mp3"],["res://voice/entretient/dialog/0/hr/hr_c2_0.mp3","res://voice/entretient/dialog/0/hr/hr_c2_1.mp3"]
+	],
+	[
+		["res://voice/entretient/dialog/1/me/me_c1.mp3"],["res://voice/entretient/dialog/1/me/me_c2.mp3"],
+		["res://voice/entretient/dialog/1/hr/hr_c1_0.mp3","res://voice/entretient/dialog/1/hr/hr_c1_1.mp3","res://voice/entretient/dialog/1/hr/hr_c1_2.mp3"],["res://voice/entretient/dialog/1/hr/hr_c2_0.mp3", "res://voice/entretient/dialog/1/hr/hr_c2_1.mp3", "res://voice/entretient/dialog/1/hr/hr_c2_2.mp3"]
+	],
+	[
+		["res://voice/entretient/dialog/2/me/me_c1.mp3"],["res://voice/entretient/dialog/2/me/me_c2.mp3"],
+		["res://voice/entretient/dialog/2/hr/hr_c1_0.mp3", "res://voice/entretient/dialog/2/hr/hr_c1_1.mp3"],["res://voice/entretient/dialog/2/hr/hr_c2.mp3"]
+	],
+	[
+		["res://voice/entretient/dialog/3/me/me_c1.mp3"],["res://voice/entretient/dialog/3/me/me_c2.mp3"],
+		["res://voice/entretient/dialog/3/hr/hr_c1_0.mp3", "res://voice/entretient/dialog/3/hr/hr_c1_1.mp3"],["res://voice/entretient/dialog/3/hr/hr_c2.mp3","res://voice/entretient/dialog/3/hr/hr_c2_1.mp3"]
+	],
+	[
+		["res://voice/entretient/dialog/4/me/me_c1.mp3"],["res://voice/entretient/dialog/4/me/me_c2.mp3"],
+		["res://voice/entretient/dialog/4/hr/hr_c1_0.mp3", "res://voice/entretient/dialog/4/hr/hr_c1_1.mp3"],["res://voice/entretient/dialog/4/hr/hr_c2_0.mp3", "res://voice/entretient/dialog/4/hr/hr_c2_1.mp3"]
+	],
+	[
+		["res://voice/entretient/dialog/5/me/me_c1.mp3"],["res://voice/entretient/dialog/5/me/me_c2.mp3"],
+		["res://voice/entretient/dialog/5/hr/hr_c1_0.mp3", "res://voice/entretient/dialog/5/hr/hr_c1_1.mp3"],["res://voice/entretient/dialog/5/hr/hr_c2_0.mp3", "res://voice/entretient/dialog/5/hr/hr_c2_1.mp3"]
+	],
+	[
+		["res://voice/entretient/dialog/6/me/me_c1.mp3"],["res://voice/entretient/dialog/6/me/me_c2.mp3"],
+		["res://voice/entretient/dialog/6/hr/hr_c1_0.mp3", "res://voice/entretient/dialog/6/hr/hr_c1_1.mp3"],["res://voice/entretient/dialog/6/hr/hr_c2_0.mp3", "res://voice/entretient/dialog/6/hr/hr_c2_1.mp3"]
+	],
+	[
+		["res://voice/entretient/dialog/7/me/me_c1.mp3"],["res://voice/entretient/dialog/7/me/me_c2.mp3"],
+		["res://voice/entretient/dialog/7/hr/hr_c1.mp3"],["res://voice/entretient/dialog/7/hr/hr_c2_0.mp3", "res://voice/entretient/dialog/7/hr/hr_c2_1.mp3"]
+	],
+	[
+		["res://voice/entretient/dialog/8/me/me_c1.mp3"],["res://voice/entretient/dialog/8/me/me_c2.mp3"],
+		["res://voice/entretient/dialog/8/hr/hr_c1_0.mp3", "res://voice/entretient/dialog/8/hr/hr_c1_1.mp3"],["res://voice/entretient/dialog/8/hr/hr_c2.mp3"]
+	],
+	[
+		["res://voice/entretient/dialog/9/me/me_c1.mp3"],["res://voice/entretient/dialog/9/me/me_c2.mp3"],
+		["res://voice/entretient/dialog/9/hr/hr_c1_0.mp3", "res://voice/entretient/dialog/9/hr/hr_c1_1.mp3"],["res://voice/entretient/dialog/9/hr/hr_c2.mp3"]
+	]
+	
+]
+
 func dialog():
 	choice_1.text = dialog_list[index][0]
 	choice_2.text = dialog_list[index][1]
@@ -73,25 +119,40 @@ func dialog():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	print(len(dialog_list))
 	choice_1.visible = false
 	choice_2.visible = false
 	choice_1.disabled = true
 	choice_2.disabled = true
+	player_enter.visible = false
+	player_enter_teacher.visible = false
 
 	player.walk_cost()
 	enter.play("move")
 	await enter.animation_finished
 
 	player.talk_cos()
+	player_enter.visible = true
 	player_enter.text = "Bonjour, est ce que je peux entrer?"
-	await get_tree().create_timer(2).timeout
+	audio_stream_player.stream = load("res://voice/entretient/intro/me_1.mp3")
+	audio_stream_player.play()
+	await audio_stream_player.finished
 	player_enter.text = ""
+	player_enter.visible = false
 
 	player.stop_moving_cos()
+	player_enter_teacher.visible  = true
 	player_enter_teacher.text = "Bonjour, M. Ben Adi ! Bienvenue chez Google et merci d’être venu aujourd’hui."
-	await get_tree().create_timer(2).timeout
-	player_enter_teacher.text = ""
+	audio_stream_player.stream = load("res://voice/entretient/intro/hr_1_0.mp3")
+	audio_stream_player.play()
+	await audio_stream_player.finished
 
+	audio_stream_player.stream = load("res://voice/entretient/intro/hr_1_1.mp3")
+	audio_stream_player.play()
+	await audio_stream_player.finished
+
+	player_enter_teacher.text = ""
+	player_enter_teacher.visible  = false
 	player.walk_cost()
 	go_to_chair.play("move")
 	await go_to_chair.animation_finished
@@ -110,18 +171,31 @@ func _on_choice_2_pressed():
 	advance_dialog()
 
 
+
+func play_the_list(audio_list):
+	for pathhh in audio_list:
+		audio_stream_player.stream = load(pathhh)
+		audio_stream_player.play()
+		await audio_stream_player.finished
+
+
 func advance_dialog():
+	var list_of_audio
 	choice_1.disabled = true
 	choice_2.disabled = true
 	choice_1.visible = false
 	choice_2.visible = false
-
+	
 	player_enter.text = dialog_list[index][choice_made - 1]
-	await get_tree().create_timer(2).timeout
+	list_of_audio=dialog_audio[index][choice_made - 1]
+	await  play_the_list(list_of_audio)
+	await get_tree().create_timer(0.2).timeout
 	player_enter.text = ""
 
 	player_enter_teacher.text = dialog_list[index][choice_made + 1]
-	await get_tree().create_timer(2).timeout
+	list_of_audio=dialog_audio[index][choice_made + 1]
+	await  play_the_list(list_of_audio)
+	await get_tree().create_timer(0.2).timeout
 	player_enter_teacher.text = ""
 
 	index += 1
@@ -132,6 +206,18 @@ func advance_dialog():
 		end_conversation()
 
 func end_conversation():
-	player_enter.text = "Merci pour votre temps."
+	#player_enter.text = "Merci pour votre temps."
 	choice_1.visible = false
 	choice_2.visible = false
+	
+
+func _process(delta: float) -> void:
+	if player_enter.text == "":
+		player_enter.visible = false
+	else:
+		player_enter.visible = true
+	if player_enter_teacher.text == "":
+		player_enter_teacher.visible = false
+	else:
+		player_enter_teacher.visible = true
+	

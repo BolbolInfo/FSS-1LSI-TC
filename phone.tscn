@@ -45,7 +45,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_3r68w"]
 resource_name = "pop_up"
-length = 5.0
+length = 15.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

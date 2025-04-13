@@ -15,3 +15,8 @@ func player_to_father():
 		text = content_text[i]["text"]
 		await get_tree().create_timer(content_text[i]["time"]).timeout
 	await father_to_player.father_to_player()
+func _process(delta: float) -> void:
+	if text=="":
+		visible = false
+	else:
+		visible=true
