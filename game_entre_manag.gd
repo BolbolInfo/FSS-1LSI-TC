@@ -209,6 +209,9 @@ func end_conversation():
 	#player_enter.text = "Merci pour votre temps."
 	choice_1.visible = false
 	choice_2.visible = false
+	await get_tree().create_timer(1).timeout
+	
+	SceneTrans.change_scene("res://end.tscn")
 	
 
 func _process(delta: float) -> void:
